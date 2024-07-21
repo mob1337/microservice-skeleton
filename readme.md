@@ -57,9 +57,3 @@ This repository contains a robust microservice architecture designed to enhance 
 - RabbitMQ
 - Python
 
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/mob1337/microservice-skeleton
-   cd microservice-skeleton
