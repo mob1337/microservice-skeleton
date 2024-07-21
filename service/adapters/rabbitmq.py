@@ -1,8 +1,9 @@
 import aio_pika
 from aio_pika.abc import AbstractConnection, AbstractChannel, AbstractMessage, AbstractExchange
 from service.config import Config
+from service.adapters.abstract_rabbitmq import AbstractMessageClient
 
-class RabbitMQClient():
+class RabbitMQClient(AbstractMessageClient):
     def __init__(self, channel: AbstractChannel = None, exchange: AbstractExchange = None):
         self.channel = channel
         self.exchange = exchange
