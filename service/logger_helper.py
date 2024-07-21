@@ -1,3 +1,8 @@
+"""
+Module handle logging
+Add your log stream handler here
+"""
+
 import logging
 
 # create logger
@@ -7,7 +12,9 @@ ch = logging.StreamHandler()
 ch.setLevel(logging.INFO)
 
 # create formatter
-formatter = logging.Formatter('%(asctime)s -  %(levelno)s - %(name)s - %(levelname)s - %(message)s')
+formatter = logging.Formatter(
+    "%(asctime)s -  %(levelno)s - %(name)s - %(levelname)s - %(message)s"
+)
 
 # add formatter to ch
 ch.setFormatter(formatter)
