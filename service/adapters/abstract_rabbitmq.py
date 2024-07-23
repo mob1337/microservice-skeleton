@@ -1,10 +1,19 @@
-import abc
-from fastapi.responses import JSONResponse
-from aio_pika.abc import AbstractConnection, AbstractChannel, AbstractMessage, AbstractExchange
+"""
+Module defining an abstract RabbitMQ message client.
+"""
 
-class AbstractMessageClient(abc.ABC): 
+import abc
+from aio_pika.abc import AbstractMessage
+
+
+class AbstractMessageClient(abc.ABC):
+    """
+    Abstract base class defining a message client interface.
+    """
 
     @abc.abstractmethod
-    def send_message(self, message: AbstractMessage, 
-                           routing_key: str) -> None:
+    async def send_message(self, message: AbstractMessage, routing_key: str) -> None:
+        """
+        Abstract method to send a message.
+        """
         raise NotImplementedError
